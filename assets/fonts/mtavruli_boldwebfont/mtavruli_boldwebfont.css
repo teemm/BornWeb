@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'mtavruli_boldwebfont';
+    src: url('fonts/mtavruli_boldwebfont.eot');
+    src: url('fonts/mtavruli_boldwebfont.eot') format('embedded-opentype'),
+         url('fonts/mtavruli_boldwebfont.woff2') format('woff2'),
+         url('fonts/mtavruli_boldwebfont.woff') format('woff'),
+         url('fonts/mtavruli_boldwebfont.ttf') format('truetype'),
+         url('fonts/mtavruli_boldwebfont.svg#mtavruli_boldwebfont') format('svg');
+}

@@ -1,0 +1,1596 @@
+﻿/*reset css start*/
+*{
+	padding: 0;margin: 0;outline:0;border: 0;
+}
+ul li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+/*reset css end*/
+/*Font Import START*/
+@font-face {
+    font-family: 'open Sans';
+    src: url('../fonts/openSans/opensans_semibold.eot');
+    src: url('../fonts/openSans/opensans_semibold.eot') format('embedded-opentype'),
+         url('../fonts/openSans/opensans_semibold.woff2') format('woff2'),
+         url('../fonts/openSans/opensans_semibold.woff') format('woff'),
+         url('../fonts/openSans/opensans_semibold.ttf') format('truetype'),
+         url('../fonts/openSans/opensans_semibold.svg#opensans_semibold') format('svg');
+}
+@font-face {
+    font-family: 'MontserratBold';
+    src: url('../fonts/MontserratBold/MontserratBold.eot');
+    src: url('../fonts/MontserratBold/MontserratBold.eot') format('embedded-opentype'),
+         url('../fonts/MontserratBold/MontserratBold.woff2') format('woff2'),
+         url('../fonts/MontserratBold/MontserratBold.woff') format('woff'),
+         url('../fonts/MontserratBold/MontserratBold.ttf') format('truetype'),
+         url('../fonts/MontserratBold/MontserratBold.svg#MontserratBold') format('svg');
+}
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../fonts/MontserratRegular/MontserratRegular.eot');
+    src: url('../fonts/MontserratRegular/MontserratRegular.eot') format('embedded-opentype'),
+         url('../fonts/MontserratRegular/MontserratRegular.woff2') format('woff2'),
+         url('../fonts/MontserratRegular/MontserratRegular.woff') format('woff'),
+         url('../fonts/MontserratRegular/MontserratRegular.ttf') format('truetype'),
+         url('../fonts/MontserratRegular/MontserratRegular.svg#MontserratRegular') format('svg');
+}
+@font-face {
+    font-family: 'mtavruli_boldwebfont';
+    src: url('../fonts/mtavruli_boldwebfont/mtavruli_boldwebfont.eot');
+    src: url('../fonts/mtavruli_boldwebfont/MontserratRegular.eot') format('embedded-opentype'),
+         url('../fonts/mtavruli_boldwebfont/mtavruli_boldwebfont.woff2') format('woff2'),
+         url('../fonts/mtavruli_boldwebfont/mtavruli_boldwebfont.woff') format('woff'),
+         url('../fonts/mtavruli_boldwebfont/mtavruli_boldwebfont.ttf') format('truetype'),
+         url('../fonts/mtavruli_boldwebfont/mtavruli_boldwebfont.svg#mtavruli_boldwebfont') format('svg');
+}
+@font-face {
+    font-family: 'bpg_arial';
+    src: url('../fonts/bpg_arial/bpg_arial.eot');
+    src: url('../fonts/bpg_arial/bpg_arial.eot') format('embedded-opentype'),
+         url('../fonts/bpg_arial/bpg_arial.woff2') format('woff2'),
+         url('../fonts/bpg_arial/bpg_arial.woff') format('woff'),
+         url('../fonts/bpg_arial/bpg_arial.ttf') format('truetype'),
+         url('../fonts/bpg_arial/bpg_arial.svg#bpg_arial') format('svg');
+}
+/*Font Import END*/
+body{
+	background:#002B3E url("../images/hisroy-of-icons-bgr.jpg") no-repeat fixed;
+	background-size: cover;
+	font-family: arial,sans-serif;
+	overflow-x: hidden;	
+}
+body.hide{
+	overflow: hidden;
+}
+::-webkit-scrollbar { 
+	width: 8px; 
+}
+::-webkit-scrollbar-thumb {
+ -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #289C96;
+}
+/*OOP Syntax START*/
+.clearspace{
+	font-size: 0 !important;
+}
+.allcenter{
+	top:50%;
+	left: 50%;
+	margin-right:-50%;
+	transform:translate(-50%,-50%);	
+	position: absolute;	
+}
+.dashed-right{
+	border-right: 1px dashed rgba(255,255,255,0.5);
+}
+.dashed-left{
+	border-left: 1px dashed rgba(255,255,255,0.5);
+}
+.dashed-top{
+	border-top: 1px dashed rgba(255,255,255,0.5);
+}
+.dashed-bottom{
+	border-bottom: 1px dashed rgba(255,255,255,0.5);
+}
+.bottomBanner{
+	font-weight: 300;
+	text-transform: uppercase;	
+	background: #fff;
+	font-family: "mtavruli_boldwebfont",sans-serif;
+	padding: 0 0 0 32px;
+	z-index: 2;
+}
+.bottomBanner h2{
+	font-size: 35px;
+}
+.bottomBanner strong{
+	font-size: 17px;
+}
+.slideParentCenter .slide-center{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.Colorturquoise{
+	color: #289C96;
+}
+.bgColor1{
+	background-color: #fff !important;
+}
+.bgColor2{
+	background-color: #184E50 !important;
+}
+.bgColor3{
+	background-color: #143B3F !important;
+}
+.bgColor4{
+	background-color: #0F2930 !important;
+}
+.bgColor5{
+	background-color: #289C96 !important;
+}
+.transition{
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;	
+}
+.centerBlock{
+	width: 1200px;
+	margin: 0 auto;
+}
+.yearNumber{
+	width: 144px;
+	height: 144px;
+	font: 50px 'MontserratBold',sans-serif;
+}
+.blockTransform{
+	transform:rotateY(0deg);
+	transition:transform .25s ease-out;
+	transform-style:preserve-3d;
+	-webkit-animation: blockTransform 15s ease-in-out 5s infinite;
+    animation: blockTransform 15s ease-in-out 5s infinite;	
+    cursor: pointer;
+}
+.blockTransform > div{
+	position: absolute; top: 0; left: 0; right: 0; bottom: 0;	
+}
+.blockTransform >.front {
+	transform:translateZ(40px);
+}
+.blockTransform >.back {
+	transform:rotateY(-150deg) translateZ(40px);
+}
+-webkit-keyframes blockTransform {
+  0%{ transform: rotateY(0deg);}
+  5%{ transform: rotateY(150deg);}
+  50%{ transform: rotateY(150deg);}
+  55%{ transform: rotateY(0deg);}
+  100%{ transform: rotateY(0deg);}  
+}
+@keyframes blockTransform {
+  0%{ transform: rotateY(0deg);}
+  5%{ transform: rotateY(150deg);}
+  50%{ transform: rotateY(150deg);}
+  55%{ transform: rotateY(0deg);}
+  100%{ transform: rotateY(0deg);}  
+}
+/*OOP Syntax END*/
+/*header START*/
+.mainHeader{
+	overflow: hidden;
+	background: #0D232D;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+    -webkit-animation: siteHeader 1s;
+    animation: siteHeader 1s;		
+}
+-webkit-keyframes siteHeader {
+    0%   {top: -64px;}  
+    100% {top: 0;}
+}
+/*Standard syntax*/
+@keyframes siteHeader {
+    0%   {top: -64px;}
+    100% {top: 0;}
+}
+.mainHeader .leftSide{
+	float: left;
+	overflow: hidden;
+}
+.mainHeader .logo{
+	float: left;
+}
+.mainHeader .logo a{
+	padding: 16px 20px;
+	display: block;
+	height: 32px;
+	opacity: 0.6;
+}
+.mainHeader .logo a:hover{
+	opacity: 1;
+}
+.mainHeader .leftSide .siteTitle{
+	float: left;
+}
+.mainHeader .leftSide .siteTitle a{
+	padding: 0 16px;
+	text-transform: uppercase;
+	font: 15px "mtavruli_boldwebfont",arial,sans-serif;
+	height: 64px;
+	line-height: 64px;
+	display: inline-block;		
+}
+.mainHeader .leftSide .siteTitle a:hover{
+	background: #1a3445;
+}
+.mainHeader .rightSide{
+	float: right;
+	overflow: hidden;
+}
+.mainHeader .rightSide > div.clearspace{
+	float: left;
+	cursor: pointer;
+	padding: 16px;
+}
+.mainHeader .rightSide > div.clearspace p{
+	width: 32px;
+	height: 32px;
+}
+.mainHeader .rightSide .sharebutton{
+	background: #132e3f;
+}
+.mainHeader .rightSide .sharebutton:hover{
+	background:#1f3849;
+}
+.mainHeader .rightSide .siteInfo:hover{
+	background:#1a3b4c;
+}
+.mainHeader .rightSide .sharebutton p{
+	background: url("../images/svg/sharebutton.svg") center center no-repeat;
+}
+.mainHeader .rightSide .siteInfo p{
+	background: url("../images/svg/shareinfo.svg") center center no-repeat;
+}
+/*header END*/
+/*MainNavigation START*/
+.MainNavigation{
+	position: fixed;
+	right: 24px;
+	top: 100px;
+	z-index: 10;
+}
+.MainNavigation .NavRightSlider > li > span{
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	margin: 0 0 8px 0;
+	background: #263f4f;
+	color: #628b96;
+	border-radius: 100%;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: 'open Sans',sans-serif;
+	display: block;
+}
+.MainNavigation li.NavHome span{
+	background: #263f4f url("../images/svg/nav-title-unactive.svg") center center no-repeat;
+}
+.MainNavigation li.NavHome span.navActive{
+	background: #289c96 url("../images/svg/nav-title-active.svg") center center no-repeat;
+}
+.MainNavigation li.NavHome span:hover{
+	background: #289c96 url("../images/svg/nav-title-active.svg") center center no-repeat;
+}
+.MainNavigation li.NavSocial span{
+	background: #263f4f url("../images/svg/nav-social.svg") center center no-repeat;
+}
+.MainNavigation li.NavSocial span.navActive{
+	background: #289c96 url("../images/svg/nav-social-active.svg") center center no-repeat;
+}
+.MainNavigation li.NavSocial span:hover{
+	background: #289c96 url("../images/svg/nav-social-active.svg") center center no-repeat;
+}
+.MainNavigation li.NavGeoLab span{
+	background: #263f4f url("../images/logo.png") center center no-repeat;
+	background-size: 40px 40px;
+	opacity: 0.5;
+}
+.MainNavigation li.NavGeoLab span.navActive{
+	background: #289c96 url("../images/logo.png") center center no-repeat;
+	background-size: 48px 48px;
+	opacity: 1;
+}
+.MainNavigation li.NavGeoLab span:hover{
+	background: url("../images/logo.png") center center no-repeat;
+	background-size: 48px 48px;
+	opacity: 1;
+}
+.MainNavigation li.NavFinish span{
+	background: #263f4f url("../images/svg/nav-title-unactive.svg") center center no-repeat;
+	transform: scaleY(-1);
+}
+.MainNavigation li.NavFinish span.navActive{
+	background: #289c96 url("../images/svg/nav-title-active.svg") center center no-repeat;
+}
+.MainNavigation li.NavFinish span:hover{
+	background: #289c96 url("../images/svg/nav-title-active.svg") center center no-repeat;
+}
+.MainNavigation .NavRightSlider > li span:hover,.MainNavigation .NavRightSlider > li span.navActive{
+	background-color: #289c96 !important;
+	color: #fff;
+	font-weight: bold;
+}
+.MainNavigation .NavRightSlider > li li span{
+	display: block;
+	cursor: pointer;
+	background: #263f4f;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	margin: 12px auto 12px auto;
+}
+.MainNavigation .NavRightSlider li li span.navActive{
+	background-color: #289c96;
+}
+.navChildren{
+	display: none;
+}
+/*MainNavigation END*/
+.fullHistory{
+    width: 100%;
+    height: 100%; 
+}
+/*slideTop START*/
+.fullHistory .topContent{
+	background: url("../images/svg/bg-01.svg") no-repeat center center / cover;
+}
+.fullHistory .topslider{
+	height: 1110px;
+}
+.fullHistory .topslider header{
+	position: relative;
+	left: 214px;
+	width: 930px;
+}
+.fullHistory .topslider h1{
+	text-align: right;
+	width: 875px;
+}
+.fullHistory .topslider h1 span{
+	display: inline-block;
+	font: 48px "mtavruli_boldwebfont",arial,sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 100px 10px 0 0;
+    -webkit-animation: siteTitle 1s;
+    animation: siteTitle 1s;
+    position: relative;
+    left: 0;	
+}
+-webkit-keyframes siteTitle {
+    0%   {left: -100%;}
+    100% {left: 0;}
+}
+@keyframes siteTitle {
+    0%   {left: -100%;}
+    100% {left: 0;}
+}
+.fullHistory .topslider header h2{
+	padding: 12px 0 0 0;
+	width: 875px;
+}
+.fullHistory .topslider header h2 > span{
+	text-align: right;
+	color: #ED2E7A;
+	font: 25px "mtavruli_boldwebfont",arial,sans-serif;
+	text-transform: uppercase;
+	padding: 0 20px 0 0;
+	position: relative;
+	display: block;
+    -webkit-animation: sitedescription 0.8s;
+    animation: sitedescription 0.8s;	
+	left: 0;
+	line-height: 24px;	
+}
+-webkit-keyframes sitedescription {
+    0%   {left: 100%;}
+    100% {left: 0;}
+}
+@keyframes sitedescription {
+    0%   {left: 100%;}
+    100% {left: 0;}
+}
+.fullHistory .topslider .animationBlock{
+	position: relative;
+	top: -45px;
+}
+.MborderDashed{
+	height: 70px;
+	width: 122px;
+	position: relative;
+	top: 284px;
+	left: 214px;
+}
+.TborderDashed{
+	height: 170px;
+	width:600px;
+	position: relative;
+	top: 600px;
+	left: 140px;	
+}
+.BborderDashed{
+	height:160px;
+	width: 150px;
+	position: relative;
+	top: -55px;
+	left: 160px;	
+}
+.fullHistory .topslider .compGreen{
+	background: url("../images/svg/comp-green.svg") no-repeat;
+	width: 328px;
+	height: 284px;
+	position: absolute;
+	left: 19px;
+	z-index: 2;
+    -webkit-animation: compGreen 8s infinite; /*Chrome, Safari, Opera */
+    animation: compGreen 8s infinite;		
+}
+.fullHistory .topslider .compPinkMac{
+	background: url("../images/svg/comp-pink-mac.svg") no-repeat;
+	width: 384px;
+	overflow: hidden;
+	word-break: break-all;
+	height: 400px;
+	position: absolute;
+	top: 166px;
+	left: 330px;
+	z-index:1;
+    -webkit-animation: compPinkMac 7.5s infinite; /*Chrome, Safari, Opera */
+    animation: compPinkMac 7.5s infinite;			
+}
+.fullHistory .topslider .laptopPink{
+	background: url("../images/svg/laptop-pink.svg") no-repeat;
+	width: 185px;
+	height: 111px;
+	position: absolute;
+	top: 110px;
+	left: 708px;
+	z-index:0;
+    -webkit-animation: laptopPink 7.5s infinite; /*Chrome, Safari, Opera */
+    animation: laptopPink 7.5s infinite;			
+}
+.fullHistory .topslider .compLisa{
+	background: url("../images/svg/comp-lisa.svg") no-repeat;
+	width: 696px;
+	height: 455px;
+	position: absolute;
+	top: 250px;
+	left: 430px;
+	z-index:2;
+    -webkit-animation: compLisa 7s infinite; /*Chrome, Safari, Opera */
+    animation: compLisa 7s infinite;			
+}
+.fullHistory .topslider .mobileGgreen{
+	background: url("../images/svg/mobile-green.svg") no-repeat;
+	width: 106px;
+	height: 208px;
+	position: absolute;
+	top: 170px;
+	left: 920px;
+	z-index:1;
+    -webkit-animation: mobileGgreen 6.5s infinite; /*Chrome, Safari, Opera */
+    animation: mobileGgreen 6.5s infinite;			
+}
+.fullHistory .topslider .mobilePink{
+	background: url("../images/svg/mobile-pink-.svg") no-repeat;
+	width: 236px;
+	height: 120px;
+	position: absolute;
+	top: 320px;
+	left: 920px;
+	z-index:0;
+    -webkit-animation: mobilePink 6.8s infinite; /*Chrome, Safari, Opera */
+    animation: mobilePink 6.8s infinite;			
+}
+.fullHistory .topslider .mobile{
+	background: url("../images/svg/mobile.svg") no-repeat;
+	width: 109px;
+	height: 208px;
+	position: absolute;
+	top: 460px;
+	left: 200px;
+	z-index:0;
+    -webkit-animation: mobile 7.5s infinite; /*Chrome, Safari, Opera */
+    animation: mobile 7.5s infinite;			
+}
+.fullHistory .topslider .compPinkAtari{
+	background: url("../images/svg/comp-pink-atari.svg") no-repeat;
+	width: 363px;
+	height: 200px;
+	position: absolute;
+	top: 600px;
+	left: 214px;
+	z-index:3;
+    -webkit-animation: compPinkAtari 5.6s infinite; /*Chrome, Safari, Opera */
+    animation: compPinkAtari 5.6s infinite;			
+}
+.fullHistory .topslider .compGreenNow{
+	background: url("../images/svg/comp-green-now.svg") no-repeat;
+	width: 288px;
+	height: 210px;
+	position: absolute;
+	top: 650px;
+	left: 931px;
+	z-index:0;
+    -webkit-animation: compGreenNow 6s infinite; /*Chrome, Safari, Opera */
+    animation: compGreenNow 6s infinite;			
+}
+/*Chrome, Safari, Opera */
+-webkit-keyframes compGreen {
+    0%   {top: 0px;}
+    50%  {top: 30px;}    
+    100% {top: 0px;}
+}
+/*Standard syntax*/
+@keyframes compGreen {
+    0%   {top: 0px;}
+    50%  {top: 30px;}
+    100% {top: 0px;}
+}
+-webkit-keyframes compPinkMac {
+    0%   {top: 166px;}
+    50%  {top: 196px;}    
+    100% {top: 166px;}
+}
+@keyframes compPinkMac {
+    0%   {top: 166px;}
+    50%  {top: 196px;}
+    100% {top: 166px;}
+}
+-webkit-keyframes laptopPink {
+    0%   {top: 110px;}
+    50%  {top: 140px;}    
+    100% {top: 110px;}
+}
+@keyframes laptopPink {
+    0%   {top: 110px;}
+    50%  {top: 140px;}
+    100% {top: 110px;}
+}
+-webkit-keyframes compLisa {
+    0%   {top: 250px;}
+    50%  {top: 280px;}    
+    100% {top: 250px;}
+}
+@keyframes compLisa {
+    0%   {top: 250px;}
+    50%  {top: 280px;}
+    100% {top: 250px;}
+}
+-webkit-keyframes mobileGgreen {
+    0%   {top: 170px;}
+    50%  {top: 200px;}    
+    100% {top: 170px;}
+}
+@keyframes mobileGgreen {
+    0%   {top: 170px;}
+    50%  {top: 200px;}
+    100% {top: 170px;}
+}
+-webkit-keyframes mobilePink {
+    0%   {top: 320px;}
+    50%  {top: 350px;}    
+    100% {top: 320px;}
+}
+@keyframes mobilePink {
+    0%   {top: 320px;}
+    50%  {top: 350px;}
+    100% {top: 320px;}
+}
+-webkit-keyframes mobile {
+    0%   {top: 460px;}
+    50%  {top: 490px;}    
+    100% {top: 460px;}
+}
+@keyframes mobile {
+    0%   {top: 460px;}
+    50%  {top: 490px;}
+    100% {top: 460px;}
+}
+-webkit-keyframes compPinkAtari {
+    0%   {top: 600px;}
+    50%  {top: 630px;}    
+    100% {top: 600px;}
+}
+@keyframes compPinkAtari {
+    0%   {top: 600px;}
+    50%  {top: 630px;}
+    100% {top: 600px;}
+}
+-webkit-keyframes compGreenNow {
+    0%   {top: 650px;}
+    50%  {top: 690px;}    
+    100% {top: 650px;}
+}
+@keyframes compGreenNow {
+    0%   {top: 650px;}
+    50%  {top: 680px;}
+    100% {top: 650px;}
+}
+.fullHistory .topslider .compGreen > img{
+	position: relative;
+	top: 50px;
+	left: 145px;
+}
+.fullHistory .topslider .compPinkMac p{
+	color: #fff;
+	width: 200px;
+	padding: 40px;
+	font-size: 17px;
+}
+.fullHistory .topslider .laptopPink > img{
+	position: relative;
+	top: 20px;
+	left: 70px;
+}
+.fullHistory .topslider .compLisa p{
+	color: #ED2E7A;
+	padding: 40px;
+	font-size: 15px;
+	position: relative;
+	left: 182px;
+	width: 180px;
+}
+.fullHistory .topslider .compGreenNow > img{
+	position: relative;
+	top: 30px;
+	left: 115px;	
+}
+.fullHistory .topContent .scrollDown{
+	background: url("../images/svg/scroll-sign.svg") no-repeat;
+	width: 112px;
+	height: 110px;
+	position: absolute;
+	top: 600px;
+	left: 0;
+	cursor: pointer;
+}
+/*slideTop END*/
+/*the80s START*/
+.fullHistory .the80s{
+	position: relative;
+	height: 1150px;
+}
+.fullHistory .the81s{
+	position: relative;
+	height: 1010px;
+}
+/*80s dashed borders*/
+.fullHistory .the80s .wordTopDashed{
+	height: 100px;
+	position: absolute;
+	top: -66px;
+	left: 142px;
+}
+.fullHistory .the80s .Bdashed80s{
+	height: 160px;
+	width: 70px;
+	position: absolute;
+    top: 112px;
+    left: 142px;
+}
+.fullHistory .the80s .Tdashed80s{
+	height: 510px;
+	width: 50px;
+	position: absolute;
+    top: 252px;
+    left: 1078px;
+}
+.fullHistory .the81s .Ldashed81s{
+	width: 934px;
+	height: 1316px;
+	position: absolute;
+    top: -236px;
+    left: 142px;	
+}
+/*80s dashed borders end*/
+/*80s emptyBlock START*/
+.fullHistory .the80s .emptyBlocks .EBone{
+	width:144px;
+	height:144px;
+	position: absolute;
+	top: 430px;
+	left: 68px;	
+}
+.fullHistory .the80s .emptyBlocks .EBtwo{
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	top: 648px;
+	left: 140px;	
+}
+.fullHistory .the80s .emptyBlocks .EBthree{
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	top: 720px;
+	left: 212px;	
+}
+.fullHistory .the80s .emptyBlocks .EBfour{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 576px;
+	left: 284px;	
+}
+.fullHistory .the80s .emptyBlocks .EBfive{
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	top: 720px;
+	left: 428px;	
+}
+.fullHistory .the80s .emptyBlocks .EBsix{
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	top: 70px;
+	left: 1076px;	
+}
+/*80s emptyBlock END*/
+.fullHistory .the80s .block_WordThe{
+	position: absolute;
+	top: 0;
+	left: 68px;
+	z-index: 2;
+}
+.fullHistory .the80s .block_80s{
+	width: 288px;
+	height: 288px;
+	position: absolute;
+	font:117px 'MontserratBold',sans-serif;
+	top:142px;
+	left:212px;
+}
+.fullHistory .the80s .block_info{
+	width: 464px;
+	height: 467px;
+	padding: 56px;
+	position: absolute;
+	top: 142px;
+	left: 500px;
+}
+.fullHistory .the80s .block_info h3{
+	width: 464px;
+	color: #fff;
+	font: normal 54px 'MontserratRegular';
+	padding: 50px 0 0 0;
+}
+.fullHistory .the80s .block_info  .contentIinfo{
+	padding: 50px 0 0 0;
+	font:15px 'open Sans',sans-serif;
+}
+.fullHistory .the80s .block_info  .contentIinfo strong{
+	color: #fff;
+}
+.fullHistory .the80s .slideAarrow{
+	width: 112px;
+	height: 112px;
+	background: url("../images/svg/slide-arrow.svg") no-repeat;
+	position: absolute;
+    top: 720px;
+    left: 964px;
+    cursor: pointer;
+}
+.fullHistory .the80s .bottomBanner{
+	width: 832px;
+	height: 144px;
+	position: absolute;
+	top: 832px;
+	left: 212px;
+}
+.fullHistory .the81s .the1981t{
+	position: absolute;
+	top: 0;
+	left: 72px;
+}
+.fullHistory .the81s .info81s{
+	width: 224px;
+	height: 288px;
+	padding: 0 32px;
+	color: #fff;
+	font:normal 16px 'open Sans',sans-serif;
+	position: absolute;
+	top: 144px;
+	left: 216px;
+}
+.fullHistory .the81s .info81s strong{
+	font:700 19px 'open Sans',sans-serif;
+}
+.fullHistory .the81s .blockDirectory{
+	width: 288px;
+	height: 288px;
+	position: absolute;
+	top: 432px;
+	left: 216px;
+}
+.fullHistory .the81s .xerox8010{
+	position: absolute;
+	top:144px;
+	left: 504px;
+}
+.fullHistory .the81s .xeroxFile{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 720px;
+	left: 216px;
+	cursor: pointer;
+}
+.fullHistory .the81s .xeroxEmpty{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 864px;
+	left: 216px;
+}
+.fullHistory .the81s .Calcblock{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 864px;
+	left: 360px;
+}
+.fullHistory .the81s .moreinfo{
+	width: 288px;
+	height: 288px;
+	color: #fff;
+	font:19px "Open Sans",sans-serif;
+	box-sizing: border-box;
+	padding: 0 32px;
+	position: absolute;
+	top: 720px;
+	left: 504px;
+	z-index: 1;
+}
+.fullHistory .the81s .moreinfo span{
+	font:normal 16px arial,sans-serif;
+}
+.fullHistory .the81s .blockProgram{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 720px;
+	left: 792px;
+}
+.fullHistory .the81s .folderEmpty,.fullHistory .the81s .programEmpty{
+	width: 72px;
+	height: 72px;
+	position: absolute;
+}
+.fullHistory .the81s .folderEmpty{
+	top: 864px;
+	left: 936px;
+}
+.fullHistory .the81s .programEmpty{
+	top: 936px;
+	left: 1008px;
+}
+/*the80s END*/
+/*historySlider START*/
+.historySlider{
+	width: 576px;
+	overflow: hidden;
+	position: relative;
+}
+.historySlider .sliderimgBlock{
+	position: relative;
+	left: 0;
+}
+.historySlider .sliderimgBlock figure{
+	background: #102b32;
+	position: relative;
+}
+.historySlider .sliderimgBlock figure p{
+	text-align: center;
+	min-height: 464px;
+}
+.historySlider .sliderimgBlock figcaption{
+	position: relative;
+	bottom: 0;
+	background: #113036;
+	width: 100%;
+	height: 112px;
+	font-size: 13px;
+	box-sizing: border-box;
+	padding: 16px;
+}
+.historySlider .sliderimgBlock figcaption strong{
+	color: #156563;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+}
+.historySlider .sliderimgBlock figcaption span{
+	color: #425A69;
+}
+.historySlider .sliderimgBlock li{
+	float: left;
+	width: 576px;
+	height: 576px;
+}
+.fullHistory .the81s .sliderimgBlock .fullpngimage{
+	max-width: 576px;
+}
+.historySlider .sliderNav{
+	position: absolute;
+	bottom: 12px;
+	z-index: 2;
+	text-align: center;
+	left: 25%;
+	right: 25%;	
+	font-size: 0;
+}
+.historySlider .sliderNav li{
+	display: inline-block;
+	background: #fff;
+	width: 24px;
+	height: 24px;
+	border-radius: 100%;
+	margin: 0 0 0 16px;
+	cursor: pointer;
+}
+.historySlider .sliderNav li:hover{
+	background: #ed2e7a;
+}
+.historySlider .sliderNav li span{
+	font-size: 0;
+}
+.historySlider .sliderNav li:first-child{
+	margin: 0;
+}
+.historySlider .sliderNav li.activeNav{
+	background: #ed2e7a;
+}
+/*historySlider END*/
+/*geolabBlock START*/
+.bgcolor6{
+	background: #7951a1;
+}
+.bgcolor7{
+	background: #623c65;
+}
+.fullHistory .geolab{
+	height: 800px;
+	position: relative;
+}
+.geolab .geolabBaner{
+	position: absolute;
+	top: 72px;
+	left: 177px;
+	overflow: hidden;
+}
+.geolab .geolabBaner .geolabLogo{
+	float: left;
+	width: 144px;
+	height: 144px;
+	background: #ddd8cf;
+	position: relative;
+}
+.geolab .geolabBaner .geolabTitle{
+	float: left;
+	font: 72px "mtavruli_boldwebfont",arial,sans-serif;
+	background: #652d8a;
+	color: #ddd8cf;
+	width: 580px;
+	height: 144px;
+	line-height: 144px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.geolab .smallblocks .iconfutu02{
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	left: 105px;
+}
+.geolab .smallblocks .iconfutu03{
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	left: 900px;
+}
+.geolab .smallblocks .iconfutu04{
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	left: 0;
+	top: 216px;
+}
+.geolab .smallblocks .iconfutu05{
+	position: absolute;
+	width: 112px;
+	height: 112px;
+	background: #9146C3;
+	left: 128px;
+	top: 344px;
+}
+.geolab .geolabinfo{
+	width: 576px;
+	position: relative;
+	top: 216px;
+	left: 450px;
+	background: #643d65;
+	color: #fff;
+	padding: 50px;
+	box-sizing: border-box;
+}
+.geolab .geolabinfo h3{
+	font: 28px "mtavruli_boldwebfont",arial,sans-serif;
+	padding: 0 0 25px 0;
+}
+.geolab .geolabinfo p{
+	font-size: 18px;
+	font: 20px "open Sans",arial,sans-serif;
+	padding: 10px 0;
+	letter-spacing: 1px;
+}
+.geolab .smallblocks .Emptyblock2{
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	left: 72px;
+	top: 288px;
+	background: #614077;
+}
+.geolab .smallblocks .Emptyblock3{
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	left: 394px;
+	top: 470px;
+	background: #A365CD;
+}
+.geolab .smallblocks .Emptyblock4{
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	left: 1082px;
+    top: 544px;
+	background: #A365CD;
+}
+.geolab .smallblocks .dashedVH{
+	width: 1px;
+	height: 200px;
+	position: absolute;
+	left: 980px;
+	top: 600px;
+}
+.geolab .smallblocks .SandClock,.geolab .smallblocks .SandClock2{
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	left: 338px;
+    top: 526px;
+	background: #614077;
+}
+.geolab .smallblocks .SandClock2{
+    left: 1026px;
+    top: 600px;
+}
+.geolab .smallblocks .messageblock{
+	width: 112px;
+	height: 112px;
+	position: absolute;
+	left: 226px;
+    top: 582px;
+}
+.geolab .smallblocks .dashedlogo{
+	position: absolute;
+	left: 142px;
+	top: 70px;
+	width: 50px;
+	height: 100px;
+}
+.geolab .smallblocks .dashedinfo{
+	position: absolute;
+	left: 250px;
+	top: 210px;
+	width: 200px;
+	height: 100px;
+}
+/*geolabBlock END*/
+/*contactUs START*/
+.fullHistory .contactUs{
+	position: relative;
+	height: 1000px;	
+}
+.contactUs .titlecontact{
+	padding: 38px 0 38px 32px;
+	width: 600px;
+	color: #83929A;
+	position: absolute;
+	left: 482px;
+}
+.contactUs .titlecontact strong{
+	color: #284050;
+}
+.contactUs .downArrow{
+	background: #fff url("../images/svg/slide-arrow2.svg") center center no-repeat;
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	left: 194px;
+}
+.contactUs .dashedBlocks .dashedCont{
+	position: absolute;
+	height: 1px;
+	left: 235px;
+	top: 60px;
+	width: 240px;
+}
+.contactUs .dashedBlocks .dashedCont2{
+	position: absolute;
+	width: 1px;
+	height: 180px;
+	left: 265px;
+	top: 115px;
+}
+.contactUs .svgBlocks .fbSocial{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 144px;
+	left: 338px;
+	overflow: hidden;
+}
+.contactUs .svgBlocks .fbSocial svg{
+	fill: #3b5998;
+	width: 145px;
+	height: 145px;	
+}
+.contactUs .svgBlocks .fbSocial svg:hover{
+	background: #3b5998;
+	fill:#fff;
+}
+.contactUs .svgBlocks .googleplus{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 287px;
+	left: 338px;
+	overflow: hidden;
+}
+.contactUs .svgBlocks .googleplus svg{
+	fill: #df4b38;
+	width: 145px;
+	height: 145px;
+}
+.contactUs .svgBlocks .googleplus svg:hover{
+	background: #df4b38;
+	fill: #fff;
+}
+.contactUs .svgBlocks .twitter{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 287px;
+	left: 194px;
+	overflow: hidden;
+}
+.contactUs .svgBlocks .twitter svg{
+	fill: #5ea9dd;
+	width: 145px;
+	height: 145px;
+}
+.contactUs .svgBlocks .twitter svg:hover{
+	background: #5ea9dd;
+	fill:#fff;
+}
+.contactUs .svgBlocks .pinterest{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 287px;
+	left: 50px;	
+	overflow: hidden;	
+}
+.contactUs .svgBlocks .pinterest svg{
+	fill: #d11e16;
+	width: 145px;
+	height: 145px;
+}
+.contactUs .svgBlocks .pinterest svg:hover{
+	background: #d11e16;
+	fill:#fff;
+}
+.contactUs .svgBlocks .instagram{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 431px;
+	left: 338px;
+	overflow: hidden;	
+}
+.contactUs .svgBlocks .instagram svg{
+	fill: #2a5b83;
+	width: 145px;
+	height: 145px;
+}
+.contactUs .svgBlocks .instagram svg:hover{
+	background: #2a5b83;
+	fill:#fff;
+}
+.contactUs .downArrow.arrow2{
+	left: 482px;
+	top: 431px;
+}
+.contactUs .downArrow.arrow3{
+	left: 626px;
+	top: 287px;
+	transform:rotate(-90deg);
+	z-index: 2;
+}
+.contactUs .downArrow.arrow4{
+	left: 50px;
+	top: 431px;
+}
+.contactUs .backgroundone{
+	width: 488px;
+	height: 300px;
+	background: url("../images/Picture1.png") top left / 100% no-repeat;
+	position: absolute;
+	left: 715px;
+	top: 227px;
+	opacity: 0.3;
+	z-index: 1;
+	-webkit-animation: backgroundWWW 5s ease-in-out infinite;
+    animation: backgroundWWW 5s ease-in-out  infinite;		
+}
+.contactUs .backgroundtwo{
+	width: 100%;
+	height: 420px;
+	background: url("../images/Picture4.png") top left / 100% no-repeat;
+	opacity: 0.3;
+	position: absolute;
+	left: -10px;
+	top: 580px;
+	-webkit-animation: backgroundWWW 5s ease-in-out infinite;
+    animation: backgroundWWW 5s ease-in-out infinite;	
+}
+-webkit-keyframes backgroundWWW {
+    0%   {opacity: 0.3;}  
+    50%  {opacity: 1;}
+    100% {opacity: 0.3;}
+}
+/*Standard syntax*/
+@keyframes backgroundWWW {
+    0%   {opacity: 0.3;}  
+    50%  {opacity: 1;}
+    100% {opacity: 0.3;}
+}
+.contactUs .svgBlocks .behance{
+	width: 144px;
+	height: 144px;
+	position: absolute;
+	top: 575px;
+	left: 482px;
+	overflow: hidden;		
+	z-index: 1;
+}
+.contactUs .svgBlocks .behance svg{
+	fill: #1769ff;
+	width: 145px;
+	height: 145px;
+}
+.contactUs .svgBlocks .behance svg:hover{
+	background: #1769ff;
+	fill:#fff;
+}
+/*contactUs END*/
+footer.copyright{
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+	color: #fff;
+	font-size: 14px;
+	text-align: right;
+}
+/*infoBlock START*/
+.infoBlock,.shareBlock{
+	position: fixed;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(17,36,48,0.9);
+	z-index: 101;
+	padding: 0 0 0 64px;
+	display: none;
+	box-sizing: border-box;	
+}
+.infoBlock .infoInner{
+	overflow-y: scroll;
+	height: 93%;
+	position: relative;
+	box-sizing: border-box;	
+	margin: 64px 0 0 0;
+}
+.infoBlock .infoInner > header{
+	padding: 36px 0 0 0;
+	color: #219D97;
+	font-family: "mtavruli_boldwebfont", sans-serif;
+}
+.infoBlock .infoInner > header h2{
+	font-size: 92px;
+}
+.infoBlock .infoInner > header p{
+	font-size: 42px;
+}
+.infoBlock h3{
+	font-size: 30px;
+	color: #219D97;
+	font-weight: bold;
+	margin: 40px 0 10px 0;
+}
+.infoBlock article{
+	font:20px "bpg_arial",sans-serif;
+	color: #fff;
+	width: 740px;
+}
+.infoBlock article a{
+	text-decoration: underline;
+	color: #219D97;
+}
+.infoBlock article ul li:before{
+	color:#219D97;
+	content:"\2022";
+	font-size: 1.5em;
+ 	padding:0 0.25em 0 0;	
+}
+.infoBlock .sectionIdea{
+	line-height: 30px;
+}
+.infoBlock .sectionIdea .PersonsInfo{
+	padding: 10px 0;
+}
+.infoBlock .contact h3{
+	width: 600px;
+}
+.infoBlock .contact{
+	padding: 0 0 10px 0;
+}
+.infoBlock .specThank .textThank{
+	padding: 15px 0 0 0;
+}
+.infoBlock .closesvg,.shareBlock .closeShare{
+	cursor: pointer;
+	width: 64px;
+	height: 64px;
+	background: #132E3F;
+	position: absolute;
+	right: 0;
+}
+.infoBlock .closesvg:hover,.shareBlock .closeShare:hover{
+	background: #1F3849;
+}
+.infoBlock .closesvg svg,.shareBlock .closeShare svg{
+	width: 32px;
+	height: 32px;
+	fill: #fff;
+}
+/*infoBlock END*/
+/*shareBlock START*/
+.shareBlock .shareButtons{
+	width: 1024px;
+	margin:150px auto 0 auto;
+	position: relative;
+}
+.shareButtons .emptyBlocks .empty01{
+	background: #289C96;
+	width: 112px;
+	height: 112px;
+	position: absolute;
+	left: 56px;
+}
+.shareButtons .smallblock{
+	width: 56px;
+	height: 56px;
+}
+.shareButtons .emptyBlocks .empty02{
+	background: #217C79;
+	position: absolute;
+	top: 0;
+	left: 168px;
+}
+.shareButtons .emptyBlocks .empty03{
+	background: #143B3F;
+	position: absolute;
+	top: 56px;
+	left: 224px;
+}
+.shareButtons .emptyBlocks .empty04{
+	background: #451F38;;
+	position: absolute;
+	top: 112px;
+	left: 0;
+}
+.shareButtons .emptyBlocks .empty05{
+	background: #B42964;
+	position: absolute;
+	top: 112px;
+	left: 168px;	
+}
+.shareButtons .emptyBlocks .empty06{
+	width: 112px;
+	height: 112px;
+	background: #ED2E7A;
+	position: absolute;
+	top: 168px;
+	left: 56px;
+}
+.shareButtons .emptyBlocks .empty07{
+	background: #B42964;
+	position: absolute;
+	left: -56px;
+	top: 224px;
+}
+.shareButtons .emptyBlocks .empty08{
+	background: #B42964;
+	position: absolute;
+	left: 0;
+	top: 280px;
+}
+.shareButtons .emptyBlocks .empty09{
+	background: #614077;
+	position: absolute;
+	left: 840px;
+	top: 160px;	
+}
+.shareButtons .emptyBlocks .empty10{
+	background: #9146C3;
+	position: absolute;
+	left: 785px;
+	top: 215px;
+}
+.shareButtons .emptyBlocks .empty11{
+	background: #623C65;
+	position: absolute;
+	left: 895px;
+	top: 105px;
+}
+.shareButtons .smIconFB{
+	background: #3B5998;
+	cursor: pointer;
+	left: 280px;
+}
+.shareButtons .smallicon{
+	position: absolute;
+	top: 0;
+}
+.shareButtons .smallicon svg{
+	fill: #fff;
+}
+.shareButtons .smallicon:hover{
+	background: #fff;
+}
+.shareButtons .smIconFB:hover svg{
+	fill:#3B5998;
+}
+.shareButtons .smIconTwiter{
+	background: #4CB5D9;
+	left: 336px;
+}
+.shareButtons .smIconTwiter:hover svg{
+	fill:#4CB5D9;
+}
+.shareButtons .smIcongoogleplus{
+	background: #D81C00;
+	left: 392px;
+}
+.shareButtons .smIcongoogleplus:hover svg{
+	fill: #D81C00;
+}
+.shareButtons .lgIcons{
+	position: absolute;
+	width: 224px;
+	height: 224px;
+}
+.shareButtons .lgIcons:hover{
+	background: #fff;
+}
+.shareButtons .lgIcons svg{
+	fill:#fff;
+}
+.shareButtons .lgIconfb{
+	background: #3B5998;
+	left: 224px;
+	top: 112px;
+}
+.shareButtons .lgIconfb:hover svg{
+	fill:#3B5998;
+}
+.shareButtons .socTitle{
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	font: bold 25px "MontserratBold";
+	text-transform: uppercase;
+	padding: 15px;
+}
+.shareButtons .lgIconfb:hover .socTitle{
+	color: #3B5998;
+}
+.shareButtons .lgIcongplus{
+	background: #DF4B38;
+	left: 448px;
+	top: 112px;	
+}
+.shareButtons .lgIcongplus:hover svg{
+	fill: #DF4B38;
+}
+.shareButtons .lgIcongplus:hover .socTitle{
+	color: #DF4B38;
+}
+.shareButtons .instagram{
+	background: #125688;
+	left: 0;
+	top: 336px;	
+}
+.shareButtons .instagram:hover svg{
+	fill:#125688;
+}
+.shareButtons .instagram:hover .socTitle{
+	color:#125688;
+}
+.shareButtons .printerest{
+	background: #CB2027;
+	left: 224px;
+	top: 336px;	
+}
+.shareButtons .printerest:hover svg{
+	fill: #CB2027;
+}
+.shareButtons .printerest:hover .socTitle{
+	color: #CB2027;
+}
+.shareButtons .twitter{
+	background: #5EA9DD;
+	left: 448px;
+	top: 336px;	
+}
+.shareButtons .twitter:hover svg{
+	fill: #5EA9DD;
+}
+.shareButtons .twitter:hover .socTitle{
+	color: #1769FF;
+}
+.shareButtons .behance{
+	background: #1769FF;
+	left: 672px;
+	top: 336px;	
+}
+.shareButtons .behance:hover svg{
+	fill: #1769FF;
+}
+.shareButtons .behance:hover .socTitle{
+	color: #1769FF;
+}
+.shareButtons .geolabLogo a{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	background:#DDD8CF url("../images/logo.png") center center no-repeat;
+	position: absolute;
+	top: 216px;
+	left: 896px;
+}
+/*shareBlock END*/
+/*Tsankashvili GeoLab*/
